@@ -1,8 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// @flow
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.foo = this.foo.bind(this);
+  }
+
+  foo: void => void;
+  foo() {}
+
   render() {
     return (
       <div className="App">
